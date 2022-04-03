@@ -7,7 +7,7 @@ El diccionario de la Real Academia Española define la palabra sticker como:
 
 Es por esto que cada vez más personas los ven como una herramienta imprescindible de comunicación o incluso como el último rayo de luz en esta luctuosa sociedad postpandémica que se asfixia inexorablemente bajo el desalmado yugo del capitalismo.
 
-Y ahora todo esto será aún más fácil con S.T.I.C.K.E.R.S. Con esta novedosa e innovadora aplicación par ver, crear y compartir stickers no solo podrás ver, sino crear e incluso compartir stickers. 
+Y ahora todo esto será aún más fácil con S.T.I.C.K.E.R.S. Con esta novedosa e innovadora aplicación para ver, crear y compartir stickers no solo podrás ver, sino crear e incluso compartir stickers. 
 
 
 ## Funcionamiento
