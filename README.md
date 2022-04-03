@@ -37,7 +37,7 @@ Admin:
    * Podrá moderar usuarios de cualquier nivel, con poder para eliminar, banear, crear y dar permisos a cualquier cuenta.
    * Podrá gestionar los packetes de stickers y su contenido, pudiendo así mismo eliminar los que no cumplan con la normativa de uso de la página.
 
-## BD
+## BD (MySQL)
 
 - Los usuarios se dividirán en anónimos (no registrados) y registrados.
 - Los usuarios registrados se repartirán en admin y premium.
