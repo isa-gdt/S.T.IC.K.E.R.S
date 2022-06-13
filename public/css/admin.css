@@ -1,0 +1,348 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Proxima Nova","Verdana","Avenir Next";
+    /* font-size: 16px;
+    line-height: 1.66; */
+}
+
+
+.item{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 1px;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+
+.grid--item__12{
+    grid-column: span 12;
+}
+
+.grid--item__8{
+    grid-column: span 8;
+    height: 1000px;
+}
+
+.grid--item__2{
+    grid-column: span 2;
+}
+
+/* NAV */
+
+nav{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 1px;
+    }
+
+.nav--menu{
+    background-color: rgb(29, 38, 45);
+    display: flex;
+    justify-content: end;
+}
+
+nav a{
+    color: rgb(166, 162, 162);
+    margin-right: 10px;
+
+}
+
+nav a:hover{
+    text-decoration: none;
+    color: white;
+}
+.nav--item{
+    /* background-color: rgb(188, 155, 202); */
+    padding: 1em;
+}
+
+.nav--item__12{
+    grid-column: span 12;
+}
+
+.nav--item__2{
+    grid-column: span 2;
+}
+
+.nav--item__10{
+    grid-column: span 10;
+}
+
+
+/***
+*
+* GO PREMIUM BANNER
+ ****/
+
+#goPremium{
+    height: 170px;
+    background: rgb(7,42,143);
+    background: linear-gradient(90deg, rgba(7,42,143,1) 46%, rgba(5,93,177,1) 81%);
+    color: white;
+
+}
+
+#goPremium--box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 25%;
+    margin-top: 15px;
+    padding: 10px;
+}
+
+#goPremium--box__img{
+    height: 100%;
+    width: 20%;
+}
+
+#goPremium >h2, h3, .grid--item__registerBtn{
+    margin-top: 10px;
+}
+
+/* register btn */
+#goPremium--box__register{
+    border: none;
+    color: rgb(7, 42, 143);
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    font-family: bolder;
+    margin-top: 10px;
+}
+
+#goPremium--box__register:hover{
+    background-color: rgb(226, 225, 225);
+}
+
+/* MAIN */
+
+.main{
+    margin-top: 20px;
+    text-align: left;
+}
+
+.grid--item__boxContainer{
+    margin-top: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    box-sizing: border-box;
+    gap: 20px;
+    justify-content: center;
+    flex-grow:1;
+}
+
+.grid--item__tittle{
+    font-size:0.8em;
+}
+
+.grid--item__boxContainer > article{
+    border: 1px solid rgb(193, 189, 189);
+    padding: 10px;
+}
+
+.grid--item__boxContainer > article:hover{
+    border: 1px solid rgb(144, 141, 141);
+}
+
+/* Banners izq y derecha */
+
+    /* nuevo pack btn */
+
+#bannerRight button{
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+    background-color: rgb(43, 196, 138);
+}
+
+#bannerRight button:hover{
+    background-color: rgb(112, 228, 183);
+}
+
+.create--img{
+    height: 50px;
+    width: 50px;
+}
+
+/**
+*USER TABLE
+*/
+
+#user_table{
+    border: 1px solid rgb(186, 181, 181);
+
+    margin-bottom: 50px;
+    width: 90%;
+    border-collapse:collapse;
+    border-spacing: 30px;
+}
+
+#user_table img {
+    width: 30px;
+    height: 30px;
+}
+
+#user_table a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#user_table th{
+    color: rgb(156, 154, 154);
+}
+
+#user_table th, td{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 40px;
+}
+
+ #user_table button{
+    border-radius: 15px;
+ }
+
+#user_table .btn_edit{
+    /* background: rgb(43, 196, 138); */
+    border: 1px solid white;
+}
+
+#user_table .btn_edit:hover{
+    background: #26af7a;
+
+}
+
+#user_table .btn_delete{
+    border: 1px solid white;
+}
+
+#user_table .btn_delete:hover{
+    background: rgb(199, 101, 63);
+
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgb(244, 246, 248)
+  }
+
+  /*** VISTA ADMIN PANEL ***/
+
+  /*
+  * admin panel cuadrados
+  */
+
+.main--dashboard{
+    width: 100%;
+    display: block;
+    margin-top: 30px;
+}
+.grid--panel{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(8, auto);
+    margin-top: 100px;
+}
+
+.grid--panel__square{
+    width: 250px;
+    height: 250px;
+    background-color: rgb(178, 221, 238);
+}
+
+.grid--panel__square:hover{
+    border: 1px solid rgb(64, 176, 221);
+}
+
+.grid--panel__square >img{
+    width: 80px;
+    height: 80px;
+    margin-top: 30%;
+}
+
+
+  /*
+  * Edit div
+  */
+
+  #user_edit{
+      display: none;
+  }
+
+  #user_create{
+      display: none;
+  }
+
+
+/* FOOTER */
+
+footer{
+    height: 450px;
+    background-color: rgb(29, 38, 45);
+    color: white;
+}
+
+.footer--container__columns{
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0;
+}
+
+.footer--container__columns h4{
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.footer--container__columns ul{
+    list-style: none;
+    text-align: left;
+    color: rgb(166, 162, 162);
+    margin-bottom: 20px;
+}
+
+.footer--container__columns li{
+    margin-bottom: 8px;
+}
+
+.footer--container__columns li:hover{
+    color: white;
+}
+
+.columns--rrss__icons{
+    display: flex;
+}
+
+/**** VISTA PACKS ****/
+
+/* edit pack */
+
+#form_edit_pack, #form_create_pack{
+    border: 1px solid black;
+    width: 400px;
+    height: 200px;
+    /* display: none; */
+    padding: 20px;
+
+}
+
+#form_edit_pack form {
+    margin-top: 20px;
+}
+#form_edit_pack input{
+    margin-bottom: 20px;
+    width: 100px;
+    height: 30px;
+}
+
+
+/* create pack */
