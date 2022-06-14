@@ -43,7 +43,7 @@ if (isset($pack)){
                 <div class="overlay--inner"></div>
             </div>
 
-                <button class="btn-crop js-crop">Crop</button>
+                <button class="btn-crop js-crop">Cortar</button>
 
 
             <div class="resize-container">
@@ -64,7 +64,7 @@ if (isset($pack)){
                         <option value={{$item->name}}>{{$item->name}}</option>
                     @endforeach
                 </select>
-                <input  id="foto-recortada" name="img" type="file" value="" >
+                <input  id="foto-recortada" name="img" type="hidden" value="" >
                 <input type="submit">
             </form>
         </div>

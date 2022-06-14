@@ -8,6 +8,7 @@ function packView(){
 
 
 function editPack(item){
+    e.preventDefault();
     // document.getElementById('form_edit_pack').style.display="block";
     console.log(item);
     return false;

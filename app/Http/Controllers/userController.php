@@ -16,7 +16,6 @@ class userController extends Controller
             $file = $req->file('avatar');
 
             $destinationPath = '../img/';
-            // $destinationPath = '../img/';
             $fileName = time(). '-' . $file->getClientOriginalName();
             $uplopadSuccess = $req->file('avatar')->move($destinationPath, $fileName);
 

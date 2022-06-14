@@ -29,7 +29,7 @@
                 @foreach ($sti as $item)
                     <tr>
                         <td>{{$item->idSti}}</td>
-                        <td>{{$item->img}}</td>
+                        <td><img src="{{$item->img}}" alt=""></td>
                     </tr>
 
                 @endforeach

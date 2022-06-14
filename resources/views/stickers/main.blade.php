@@ -42,7 +42,7 @@
             @foreach ($sti as $item)
                 <article>
                     <p>{{$item->idSti}}</p>
-                    <p>{{$item->img}}</p>
+                    <img src="{{$item->img}}" alt="">
                 </article>
             @endforeach
         </section>

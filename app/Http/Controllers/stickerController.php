@@ -35,7 +35,6 @@ class stickerController extends Controller
         } else{
             return view('admin.adminMain', ["sti" => $stickers]);
         }
-
     }
 
     public function goToProfile(Request $req){
@@ -72,24 +71,11 @@ class stickerController extends Controller
 
     public function createSticker(Request $req){
         $pack = DB::table('pack')->where('name', '=', $req->packName)->first();
-       // if(isset($_FILES['tFile'])) $file = $_FILES['tFile'];
-
-        // $datos = base64_decode(
-        //     preg_replace('/^[^,]*,/', '', $req->img)
-        //   );
-        $destinationPath = '../img/';
-        //   var_dump($destinationPath);
-        // file_put_contents('imagen.png', $datos);
-        // dd(json_encode('imagen.png'));
-
-
-        // $fileName = time(). '-' . 'imagen.png';
-        // $uplopadSuccess = $datos->put($destinationPath, $fileName);
 
         Sticker::create([
             'idSti'=> null,
             'idPack'=>$pack->idPack??1,
-            'img'=>$destinationPath . $fileName,
+            'img'=>$req->img,
         ]);
 
         if(Auth::user()->type==0){

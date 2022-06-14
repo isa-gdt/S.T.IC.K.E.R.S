@@ -22,7 +22,6 @@
         <form id="form-profile" action="{{route('user.edit', $usu)}}" method="post" enctype="multipart/form-data">
             @csrf
             <label for="avatar">Foto de perfil</label>
-            <div>{{$usu->avatar}}</div>
             <div ><img id="img-avatar" src="{{$usu->avatar}}" alt=""></div>
             <input type="file" name ="avatar"><br>
             <label for="name" >Name</label>

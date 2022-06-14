@@ -177,14 +177,14 @@ var resizeableImage = function(image_target) {
         $('.overlay').css('border','transparent');
         $('.overlay:before').css('border','transparent');
 
+        //input con recorte
+        $('#foto-recortada').val(recorte);
 
         $('#prueba').attr('src', recorte);
-        console
+
 
         //from url to file
         //dataURLtoFile(recorte, 'imagen.png');
-
-
     }
 
 

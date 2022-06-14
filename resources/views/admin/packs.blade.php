@@ -56,24 +56,6 @@
         </form>
     </div>
 
-    {{-- <div id="form_create_pack">
-        <form action="{{route('pack.create')}}" method="post">
-            @csrf
-            <label for="name">Nombre</label>
-            <label for="user">usuario</label>
-            <select name="user" id="user">
-                @foreach($users as $item)
-                <option value={{$item->name}}>{{$item->name}}</option>
-                @endforeach
-            </select>
-            <label for="packName">Nombre del pack</label>
-            <input type="text"  name="name">
-           <input type="submit">
-        </form>
-    </div> --}}
-
-
-
 </main>
 @endsection
 
