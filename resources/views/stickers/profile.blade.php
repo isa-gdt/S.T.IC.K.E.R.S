@@ -12,25 +12,38 @@
 @endsection
 
 @section('banner-register')
-<div id="goPremium"  class="grid--item grid--item__12">
-    <h1> My Profile</h1>
+<div class="grid--item grid--item__12">
+    <h2> Account data</h2>
 </div>
 @endsection
 
 @section('main')
     <main class="grid--item grid--item__8">
-        <form action="{{route('user.edit', $usu)}}" method="post">
+        <form id="form-profile" action="{{route('user.edit', $usu)}}" method="post" enctype="multipart/form-data">
             @csrf
+            <label for="avatar">Foto de perfil</label>
+            <div>{{$usu->avatar}}</div>
+            <div ><img id="img-avatar" src="{{$usu->avatar}}" alt=""></div>
+            <input type="file" name ="avatar"><br>
             <label for="name" >Name</label>
-            <input type="text" name="name" placeholder="{{$usu->name}}">
+            <input type="text" name="name" placeholder="{{$usu->name}}"><br>
             <label for="email">Email</label>
-            <input type="text" name="email" placeholder="{{$usu->email}}">
-            <input type="submit">
+            <input type="text" name="email" placeholder="{{$usu->email}}"><br>
+            <input class="editDatos-btn" type="submit" value="Modificar datos">
         </form>
+        <button id="borrarCuenta-btn"><a href="{{route('user.delete', $usu)}}"></a>Eliminar Cuenta</button>
 
-        <button><a href="{{route('user.delete', $usu)}}">Eliminar Cuenta</a></button>
 
+        <div id="profile-notifications">
+            <h2> Notifications</h2>
+
+            <p class="p-border">I wish to recieve newsletter, promotions and news from Freepik Company <input type="checkbox" checked="checked"></p>
+
+
+            <p><strong>Basic information on Data Protection:</strong> Freepik Company stores your data to improve the service and, with your consent, offers news, promotions and raffles, as well as projects and releases from Freepik Company.<strong>More information</strong></p>
+        </div>
     </main>
+
 @endsection
 
 

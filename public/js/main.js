@@ -34,7 +34,7 @@ var resizeableImage = function(image_target) {
             //btn crop
         $('.js-crop').on('click', crop);
 
-        $('#submit-img').on('click', imgInput);
+
 
 
     };
@@ -171,28 +171,23 @@ var resizeableImage = function(image_target) {
         ctx.drawImage(image_target, left, top, width, height, 0, 0, width, height);
         // window.open(crop_canvas.toDataURL("image/png"));
         var recorte = crop_canvas.toDataURL("image/png");
+        console.log(recorte)
         $('.resize-image').attr('src', recorte);
         $('.resize-handle').hide();
         $('.overlay').css('border','transparent');
         $('.overlay:before').css('border','transparent');
-        console.log(text_input)
-        ctx.font = '50px serif';
-        ctx.fillStyle = "#435a6b";
-        ctx.fillText('holi', 50, 50);
 
 
+        $('#prueba').attr('src', recorte);
+        console
 
+        //from url to file
+        //dataURLtoFile(recorte, 'imagen.png');
 
 
     }
 
-    function imgInput(event){
-        event.preventDefault();
-        var imgInput = document.querySelector("#img-input").input;
-        console.log(imgInput)
-        $('.resize-image').attr('src', imgInput.baseURI)
-        console.log($('.resize-image').src);
-    }
+
 
     init();
 };
@@ -200,6 +195,17 @@ var resizeableImage = function(image_target) {
 resizeableImage($('.resize-image'));
 
 
+function dataURLtoFile (dataUrl, fileName) {
+    var arr = dataUrl.split(',');
+    var mime = arr[0].match(/:(.*?);/)[1];
+    var bstr = atob(arr[1]);
+    var n = bstr.length, u8arr = new Uint8Array(n);
+    while(n--){
+        u8arr[n] = bstr.charCodeAt(n);
+    }
+    var file = new File([u8arr], fileName, {type:mime});
+    console.log(file);
 
+}
 
 

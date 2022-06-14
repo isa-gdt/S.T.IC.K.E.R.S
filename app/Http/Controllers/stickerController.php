@@ -8,6 +8,7 @@ use App\Models\Pack;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\packController;
 use App\Http\Controllers\stickerController;
+use Illuminate\Support\Facades\DB;
 
 class stickerController extends Controller
 {
@@ -43,7 +44,8 @@ class stickerController extends Controller
     }
 
     public function goToArtStation(Request $req){
-        return view('stickers.artStation');
+        $packs = Pack::all();
+        return view('stickers.artStation', ["packs" => $packs]);
     }
 
     public function goToMyCollection(Request $req){
@@ -68,7 +70,34 @@ class stickerController extends Controller
         return view('stickers.logged', compact('results'))->with(['search' => $request->search])->render();
     }
 
-    public function show(Request $request){
-        $post = Post::findOrFail($request->id);
-        return view('posts.post', compact('post'))->render();}
+    public function createSticker(Request $req){
+        $pack = DB::table('pack')->where('name', '=', $req->packName)->first();
+       // if(isset($_FILES['tFile'])) $file = $_FILES['tFile'];
+
+        // $datos = base64_decode(
+        //     preg_replace('/^[^,]*,/', '', $req->img)
+        //   );
+        $destinationPath = '../img/';
+        //   var_dump($destinationPath);
+        // file_put_contents('imagen.png', $datos);
+        // dd(json_encode('imagen.png'));
+
+
+        // $fileName = time(). '-' . 'imagen.png';
+        // $uplopadSuccess = $datos->put($destinationPath, $fileName);
+
+        Sticker::create([
+            'idSti'=> null,
+            'idPack'=>$pack->idPack??1,
+            'img'=>$destinationPath . $fileName,
+        ]);
+
+        if(Auth::user()->type==0){
+            return redirect()->route('myCollection');
+        } else{
+            return redirect()->route('admin.packs');
+        }
+    }
+
+
 }

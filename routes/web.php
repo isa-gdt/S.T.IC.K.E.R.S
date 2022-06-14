@@ -35,16 +35,16 @@ Route::get('/logged',[stickerController::class, 'getStickers'])->name('logged');
     Route::get('/myCollection',[stickerController::class, 'goToMyCollection'])->name('myCollection');
     Route::get('creation/{pack}',[stickerController::class, 'goToCreation'])->name('goToCreation');
 
-    Route::get('/posts',[PostController::class, 'index'])->name('posts.index');
-    Route::get('/search',[stickerController::class, 'search'])->name('search');
-    Route::get('/show',[stickerController::class, 'show'])->name('show');
+    Route::post('/create', [stickerController::class, 'createSticker'])->name('createSticker');
+
 
 
 
 /**
  * Operaciones con admin (en userController)
  */
-Route::group(['middleware' => 'admin', "prefix"=>"admin", 'as' => "admin."], function(){
+//'middleware' => 'admin',
+Route::group(["prefix"=>"admin", 'as' => "admin."], function(){
     Route::get('/admin',[userController::class, 'goToAdmin'])->name('admin');
     Route::get('/users',[userController::class,'goToUsers'])->name('users');
     Route::get('/packs',[userController::class,'goToPacks'])->name('packs');

@@ -11,11 +11,23 @@ use Illuminate\Support\Facades\Auth;
 class userController extends Controller
 {
     public function edit(Request $req, User $usu){
+
+        if($req->hasFile('avatar')){
+            $file = $req->file('avatar');
+
+            $destinationPath = '../img/';
+            // $destinationPath = '../img/';
+            $fileName = time(). '-' . $file->getClientOriginalName();
+            $uplopadSuccess = $req->file('avatar')->move($destinationPath, $fileName);
+
+            $usu->avatar = $destinationPath . $fileName??$usu->avatar;
+        }
+
         $usu->name = $req->name??$usu->name;
         $usu->email = $req->email??$usu->email;
-        $usu->type = $req->type==0?'Premium':'Admin'??$req->type;
+        $usu->type = $req->type??$usu->type;
         $usu->save();
-        return redirect()->route('sticker.profile');
+        return redirect()->route('profile');
     }
 
     public function delete (Request $req, User $usu){

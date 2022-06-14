@@ -344,3 +344,81 @@ footer{
     border-radius: 5px;
     color: #FFF;
 }
+
+
+/**
+*PROFILE
+*/
+
+#img-avatar{
+    height: 200px;
+    width: 200px;
+}
+
+#form-profile{
+    border: 1px solid rgb(221, 216, 216);
+    margin-top: 50px;
+    margin-left: 30%;
+    width: 600px;
+    height: 450px;
+    padding: 20px;
+}
+
+#form-profile > input{
+    padding: 10px;
+    margin-top: 10px;
+}
+
+
+#borrarCuenta-btn{
+    margin-top: 30px;
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(212, 17, 17);
+    border: 1px solid rgb(229, 229, 229);
+    border-radius: 5px;
+}
+
+#borrarCuenta-btn:hover {
+    background-color: rgb(212, 17, 17);
+    color: white;
+}
+
+.editDatos-btn{
+    margin-top: 30px;
+    padding: 10px;
+    color: rgb(43, 196, 138);
+    border: 1px solid rgb(43, 196, 138);
+    border-radius: 5px;
+}
+
+.editDatos-btn:hover {
+    background-color: rgb(43, 196, 138);
+    color: white;
+}
+
+#profile-notifications{
+    width: 700px;
+    text-align: left;
+    margin-left: 30%;
+    margin-top: 40px;
+}
+
+#profile-notifications p {
+    margin-top: 20px;
+}
+
+.p-border {
+    border: 1px solid rgb(229, 229, 229);
+    padding: 20px;
+}
+
+
+
+
+
+#prueba{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}

@@ -4,7 +4,11 @@
 if (isset($pack)){
     echo $pack;
 }
+
 ?>
+
+
+
 
 @section('nav-Menu')
     <div class="nav--menu nav--item nav--item__12">
@@ -38,7 +42,10 @@ if (isset($pack)){
             <div class="overlay">
                 <div class="overlay--inner"></div>
             </div>
-            <button class="btn-crop js-crop">Crop</button>
+
+                <button class="btn-crop js-crop">Crop</button>
+
+
             <div class="resize-container">
                 <span class="resize-handle resize-handle-nw"></span>
                 <span class="resize-handle resize-handle-ne"></span>
@@ -47,5 +54,23 @@ if (isset($pack)){
                 <span class="resize-handle resize-handle-se"></span>
             </div>
         </div>
+
+        <div>
+            <form action="{{route('createSticker')}}" method="post" enctype="multipart/form-data">
+                @csrf
+                <label for="pack">Nombre del pack</label>
+                <select name="packName">
+                    @foreach($packs as $item)
+                        <option value={{$item->name}}>{{$item->name}}</option>
+                    @endforeach
+                </select>
+                <input  id="foto-recortada" name="img" type="file" value="" >
+                <input type="submit">
+            </form>
+        </div>
+
+        <img id="prueba" src=" " alt="">
     </main>
 @endsection
+
+

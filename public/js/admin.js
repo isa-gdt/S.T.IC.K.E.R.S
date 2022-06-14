@@ -1,9 +1,9 @@
 function userView(){
-    window.open('/stickers/stickers/public/admin/users', '_self');
+    window.open('/proyectoFinal/S.T.IC.K.E.R.S/public/admin/users', '_self');
 }
 
 function packView(){
-    window.open('/stickers/stickers/public/admin/packs', '_self');
+    window.open('/proyectoFinal/S.T.IC.K.E.R.S/public/admin/packs', '_self');
 }
 
 
