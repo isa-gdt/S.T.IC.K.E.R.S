@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Document</title>
-        <link rel="stylesheet" href="{{ asset('./css/admin.css') }}">
+        <link rel="stylesheet" href="{{asset('css/admin.css')}}">
         <script src="https://kit.fontawesome.com/5831c4a164.js" crossorigin="anonymous"></script>
 
 
@@ -110,6 +110,6 @@
         @show
 
     </body>
-    <script src="../js/admin.js"></script>
+    <script src="{{asset('/js/admin.js')}}"></script>
 </html>
 

@@ -5,10 +5,10 @@ if (isset($pack)){
     echo $pack;
 }
 
+if (isset($img)){
+
+}
 ?>
-
-
-
 
 @section('nav-Menu')
     <div class="nav--menu nav--item nav--item__12">
@@ -28,28 +28,32 @@ if (isset($pack)){
 
 @section('main')
     <main class="grid--item grid--item__8">
-        <form id="">
-            <div>
-              <label for="file">Choose file to upload</label>
-              <input type="file" id="file" name="file" multiple>
-            </div>
-            <div>
-              <button>Submit</button>
-            </div>
-        </form>
+        <div>
+            <form id="form-upload-img" action="{{route('upload')}}" method="post" enctype="multipart/form-data">
+                @csrf
+                <label for="file">Choose file to upload</label>
+                <input type="file" id="file" name="file" multiple>
+                <input type="submit">
+            </form>
+        </div>
 
         <div class="component">
             <div class="overlay">
                 <div class="overlay--inner"></div>
             </div>
-
                 <button class="btn-crop js-crop">Cortar</button>
-
-
             <div class="resize-container">
                 <span class="resize-handle resize-handle-nw"></span>
                 <span class="resize-handle resize-handle-ne"></span>
-                <img class="resize-image" src="img/mrx.jpg" alt="Image" />
+
+                <?php
+                if (isset($img)){
+                ?>
+                    <img class="resize-image" src="../img/{{$img}}" alt="Image" />
+                <?php
+                }
+                ?>
+
                 <span class="resize-handle resize-handle-sw"></span>
                 <span class="resize-handle resize-handle-se"></span>
             </div>
@@ -69,7 +73,7 @@ if (isset($pack)){
             </form>
         </div>
 
-        <img id="prueba" src=" " alt="">
+        {{-- <img id="prueba" src=" " alt=""> --}}
     </main>
 @endsection
 

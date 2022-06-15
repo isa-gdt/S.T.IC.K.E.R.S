@@ -46,10 +46,10 @@
                         <td>{{$item->idPack}}</td>
                         <td>{{$item->name}}</td>
                         @foreach($item->stickersPack() as $sti)
-                        <td>{{$sti->img}}</td>
+                        <td><img src="{{$sti->img}}" alt=""></td>
                         @endforeach
                         <td><button><a href="{{route('pack.delete', $item)}}">Borrar</a></button></td>
-                        <td><button><a href="{{route('sticker.goToCreation', $item)}}">Añadir</a></button></td>
+                        {{-- <td><button><a href="{{route('goToCreation', $item)}}">Añadir</a></button></td> --}}
                     </tr>
 
                 @endforeach

@@ -43,7 +43,7 @@ class stickerController extends Controller
     }
 
     public function goToArtStation(Request $req){
-        $packs = Pack::all();
+        $packs = Pack::where('idUsu', '=', Auth::user()->idUsu)->get();
         return view('stickers.artStation', ["packs" => $packs]);
     }
 
@@ -83,6 +83,19 @@ class stickerController extends Controller
         } else{
             return redirect()->route('admin.packs');
         }
+    }
+
+    public function uploadImg(Request $req){
+        $packs = Pack::where('idUsu', '=', Auth::user()->idUsu)->get();
+
+        if($req->hasFile('file')){
+            $file = $req->file('file');
+            $destinationPath = '../img/';
+            $fileName = time(). '-' . $file->getClientOriginalName();
+            $uplopadSuccess = $req->file('file')->move($destinationPath, $fileName);
+
+        }
+        return view('stickers.artStation', ["img"=>$fileName], ["packs" => $packs]);
     }
 
 

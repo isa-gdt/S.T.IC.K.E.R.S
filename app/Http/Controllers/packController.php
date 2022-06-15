@@ -46,7 +46,7 @@ class packController extends Controller
         $usu->name = $req->name??$usu->name;
         $usu->email = $req->email??$usu->email;
         $usu->save();
-        return redirect()->route('sticker.profile');
+        return redirect()->route('profile');
     }
 
 }

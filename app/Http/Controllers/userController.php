@@ -73,4 +73,10 @@ class userController extends Controller
         return redirect()->route('admin.users');
     }
 
+    public function editUser(Request $req, User $usu){
+        return view('admin.editUser', ["user"=>$usu]);
+    }
+
+
+
 }

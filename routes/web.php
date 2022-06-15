@@ -34,8 +34,8 @@ Route::get('/logged',[stickerController::class, 'getStickers'])->name('logged');
     Route::get('/artStation',[stickerController::class, 'goToArtStation'])->name('artStation');
     Route::get('/myCollection',[stickerController::class, 'goToMyCollection'])->name('myCollection');
     Route::get('creation/{pack}',[stickerController::class, 'goToCreation'])->name('goToCreation');
-
     Route::post('/create', [stickerController::class, 'createSticker'])->name('createSticker');
+    Route::post('upload', [stickerController::class, 'uploadImg'])->name('upload');
 
 
 
@@ -49,6 +49,7 @@ Route::group(["prefix"=>"admin", 'as' => "admin."], function(){
     Route::get('/users',[userController::class,'goToUsers'])->name('users');
     Route::get('/packs',[userController::class,'goToPacks'])->name('packs');
     Route::get('/adminMain',[userController::class,'goToAdminMain'])->name('adminMain');
+    Route::get('/editUser/{usu}', [userController::class, 'editUser'])->name('editUser');
 
 });
 
