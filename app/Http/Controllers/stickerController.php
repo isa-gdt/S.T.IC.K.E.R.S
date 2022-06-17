@@ -24,12 +24,12 @@ class stickerController extends Controller
     // }
 
     public function getStickersMain(Request $req){
-        $stickers = Sticker::all();
+        $stickers = Pack::all();
         return view('stickers.main', ["sti" => $stickers]);
     }
 
     public function getStickers(Request $req){
-        $stickers = Sticker::all();
+        $stickers = Pack::all();
         if(Auth::user()->type==0){
             return view('stickers.logged', ["sti" => $stickers]);
         } else{
@@ -71,7 +71,6 @@ class stickerController extends Controller
 
     public function createSticker(Request $req){
         $pack = DB::table('pack')->where('name', '=', $req->packName)->first();
-
         Sticker::create([
             'idSti'=> null,
             'idPack'=>$pack->idPack??1,
