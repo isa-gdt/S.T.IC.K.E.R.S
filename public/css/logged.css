@@ -139,6 +139,12 @@ nav a:hover{
     margin-top: 20px;
     text-align: left;
     background-color: rgb(248, 250, 251);
+    overflow: scroll;
+
+}
+
+.main::-webkit-scrollbar {
+    display: none;
 }
 
 .grid--item__boxContainer{
@@ -441,4 +447,19 @@ footer{
 
 #create-pack{
     margin-top: 40px;
+}
+
+
+/*buttons*/
+.submit-btn{
+    margin-top: 30px;
+    padding: 10px;
+    color: rgb(43, 196, 138);
+    border: 1px solid rgb(43, 196, 138);
+    border-radius: 5px;
+}
+
+.submit-btn:hover {
+    background-color: rgb(43, 196, 138);
+    color: white;
 }

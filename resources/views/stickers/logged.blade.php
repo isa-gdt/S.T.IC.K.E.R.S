@@ -26,12 +26,13 @@ if (isset($results)){
 
 @section('banner-register')
     <div id="goPremium"  class="grid--item grid--item__12">
-        <h1> Logueado </h1>
+        <h1> Welcome to the sticker-verse </h1>
+        <p>Encuentra y crea los stickers más divertidos</p>
     </div>
 @endsection
 
 @section('main')
-    <main class="grid--item grid--item__8">
+    <main class="grid--item grid--item__8 main">
         <table>
             <thead>
                 <tr>

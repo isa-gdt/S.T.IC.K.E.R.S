@@ -100,7 +100,6 @@
                         </div>
                     </div>
                     <div class="footer--container__logo">
-                        <a href="">LOGO</a>
                         <p>Copyright blablablabla SL. Todos los derechos reservados</p>
                     </div>
                     <div class="footer--container__lan"></div>

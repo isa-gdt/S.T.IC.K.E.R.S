@@ -128,6 +128,11 @@ nav a:hover{
 .main{
     margin-top: 20px;
     text-align: left;
+    overflow: scroll;
+}
+
+.main::-webkit-scrollbar {
+    display: none;
 }
 
 .grid--item__boxContainer{
@@ -200,7 +205,7 @@ nav a:hover{
     color: rgb(156, 154, 154);
 }
 
-#user_table th, td{
+#user_table th, #user_table td{
     padding-top: 10px;
     padding-bottom: 20px;
     padding-left: 30px;
@@ -274,7 +279,40 @@ tbody tr:nth-child(odd) {
   */
 
   #user_edit{
-      display: none;
+    margin: 100px 700px;
+    border: 1px solid black;
+    width: 400px;
+    height: 350px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+
+  }
+
+  #user_edit input[type=text], select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  #user_edit input[type=submit]{
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  #user_edit input[type=submit]:hover {
+    background-color: #45a049;
   }
 
   #user_create{
@@ -327,22 +365,46 @@ footer{
 /* edit pack */
 
 #form_edit_pack, #form_create_pack{
+    margin: 100px 700px;
     border: 1px solid black;
     width: 400px;
-    height: 200px;
-    /* display: none; */
+    height: 250px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
     padding: 20px;
 
 }
 
+
+#form_edit_pack input[type=text], select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  #form_edit_pack input[type=submit]{
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  #form_edit_pack input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
 #form_edit_pack form {
     margin-top: 20px;
 }
-#form_edit_pack input{
-    margin-bottom: 20px;
-    width: 100px;
-    height: 30px;
-}
 
 
-/* create pack */
+

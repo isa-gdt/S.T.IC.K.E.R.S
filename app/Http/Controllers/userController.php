@@ -26,7 +26,13 @@ class userController extends Controller
         $usu->email = $req->email??$usu->email;
         $usu->type = $req->type??$usu->type;
         $usu->save();
-        return redirect()->route('profile');
+
+        if(Auth::user()->type==0){
+            return redirect()->route('profile');
+        } else{
+            return redirect()->route('admin.users');
+        }
+
     }
 
     public function delete (Request $req, User $usu){
@@ -40,7 +46,7 @@ class userController extends Controller
     }
 
     public function goToAdminMain(Request $req){
-        $stickers = Sticker::all();
+        $stickers = Pack::all();
         return view ('admin.AdminMain',["sti" => $stickers]);
     }
 

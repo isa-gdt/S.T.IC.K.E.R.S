@@ -42,11 +42,24 @@ class packController extends Controller
         }
     }
 
-    public function editPack(Request $req, User $usu){
-        $usu->name = $req->name??$usu->name;
-        $usu->email = $req->email??$usu->email;
-        $usu->save();
-        return redirect()->route('profile');
+    public function editPackView(Request $req, Pack $pack){
+        return view ('admin.editPack', ["pack"=>$pack]);
     }
+
+
+    public function editPack(Request $req, Pack $pack){
+
+        $pack->name = $req->name??$pack->name;
+        $pack->idUsu = $req->idUsu??$pack->idUsu;
+        $pack->save();
+        if(Auth::user()->type==0){
+            return redirect()->route('profile');
+        } else{
+            return redirect()->route('admin.packs');
+        }
+
+    }
+
+
 
 }

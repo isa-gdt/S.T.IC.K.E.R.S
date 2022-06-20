@@ -33,7 +33,7 @@ if (isset($img)){
                 @csrf
                 <label for="file">Choose file to upload</label>
                 <input type="file" id="file" name="file" multiple>
-                <input type="submit">
+                <input class="submit-btn" type="submit" value="Cargar archivo">
             </form>
         </div>
 
@@ -62,14 +62,14 @@ if (isset($img)){
         <div>
             <form action="{{route('createSticker')}}" method="post" enctype="multipart/form-data">
                 @csrf
-                <label for="pack">Nombre del pack</label>
+                <label for="pack">Añadir al pack:</label></br>
                 <select name="packName">
                     @foreach($packs as $item)
                         <option value={{$item->name}}>{{$item->name}}</option>
                     @endforeach
-                </select>
+                </select></br>
                 <input  id="foto-recortada" name="img" type="hidden" value="" >
-                <input type="submit">
+                <input class="submit-btn" type="submit" value="Crear Stickers">
             </form>
         </div>
 

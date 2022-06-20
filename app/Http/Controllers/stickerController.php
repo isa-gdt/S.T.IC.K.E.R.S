@@ -77,11 +77,9 @@ class stickerController extends Controller
             'img'=>$req->img,
         ]);
 
-        if(Auth::user()->type==0){
-            return redirect()->route('myCollection');
-        } else{
-            return redirect()->route('admin.packs');
-        }
+        return redirect()->route('myCollection');
+
+
     }
 
     public function uploadImg(Request $req){

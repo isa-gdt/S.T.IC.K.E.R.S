@@ -17,19 +17,20 @@
 @endsection
 
 @section('main')
-    <main class="grid--item grid--item__8">
+    <main class="grid--item grid--item__8 main">
         <table>
             <thead>
                 <tr>
-                    <th>id</th>
-                    <th>nombre</th>
+                    <th>temática</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($sti as $item)
                     <tr>
-                        <td>{{$item->idSti}}</td>
-                        <td><img src="{{$item->img}}" alt=""></td>
+                        <td>{{$item->name}}</td>
+                        @foreach($item->stickersPack() as $sti)
+                            <td><img src="{{$sti->img}}" alt=""></td>
+                        @endforeach
                     </tr>
 
                 @endforeach

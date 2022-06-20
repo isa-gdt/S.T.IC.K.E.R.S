@@ -23,7 +23,7 @@
             @csrf
             <label for="name">Nombre del nuevo pack</label>
             <input type="text"  name="name">
-           <input type="submit">
+           <input class="submit-btn" type="submit">
         </form>
     </div>
 @endsection

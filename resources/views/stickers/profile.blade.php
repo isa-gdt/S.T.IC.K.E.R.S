@@ -36,10 +36,10 @@
         <div id="profile-notifications">
             <h2> Notifications</h2>
 
-            <p class="p-border">I wish to recieve newsletter, promotions and news from Freepik Company <input type="checkbox" checked="checked"></p>
+            <p class="p-border">I wish to recieve newsletter, promotions and news from S.t.i.c.k.e.r.s Company <input type="checkbox" checked="checked"></p>
 
 
-            <p><strong>Basic information on Data Protection:</strong> Freepik Company stores your data to improve the service and, with your consent, offers news, promotions and raffles, as well as projects and releases from Freepik Company.<strong>More information</strong></p>
+            <p><strong>Basic information on Data Protection:</strong> S.t.i.c.k.e.r.s Company stores your data to improve the service and, with your consent, offers news, promotions and raffles, as well as projects and releases from S.t.i.c.k.e.r.s Company.<strong>More information</strong></p>
         </div>
     </main>
 

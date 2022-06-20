@@ -38,8 +38,6 @@ Route::get('/logged',[stickerController::class, 'getStickers'])->name('logged');
     Route::post('upload', [stickerController::class, 'uploadImg'])->name('upload');
 
 
-
-
 /**
  * Operaciones con admin (en userController)
  */
@@ -50,7 +48,7 @@ Route::group(["prefix"=>"admin", 'as' => "admin."], function(){
     Route::get('/packs',[userController::class,'goToPacks'])->name('packs');
     Route::get('/adminMain',[userController::class,'goToAdminMain'])->name('adminMain');
     Route::get('/editUser/{usu}', [userController::class, 'editUser'])->name('editUser');
-
+    Route::get('editPack/{pack}', [packController::class, 'editPackView'])->name('editPackView');
 });
 
 
@@ -69,6 +67,8 @@ Route::group(["prefix"=>"user", 'as' => 'user.'], function(){
 Route::group(["prefix"=>"pack", 'as' => 'pack.'], function(){
     Route::get('delete/{pack}',[packController::class, 'delete'])->name('delete');
     Route::post('create',[packController::class, 'create'])->name('create');
+    Route::post('editPack/{pack}',[packController::class, 'editPack'])->name('editPack');
+
 
 });
 

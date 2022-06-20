@@ -21,14 +21,14 @@
 @section('banner--left')
 {{-- Banner de publicidad izq--}}
 <div id="bannerLeft" class="grid--item grid--item__2">
-    <img src = "{{ asset('./css/imgs/bb.webp') }}" alt="Logo"/>
+
 </div>
 @endsection
 
 @section('banner-right')
 {{-- Banner de publicidad derecha --}}
 <div id="bannerRight" class="grid--item grid--item__2">
-    <p>der</p>
+
 </div>
 @endsection
 
@@ -49,13 +49,15 @@
                     <tr>
                         <td>{{$item->name}}</td>
                         @foreach($item->stickersPack() as $sti)
-                        <td><img src="{{$sti->img}}" alt=""></td>
+                            <td><img src="{{$sti->img}}" alt=""></td>
                         @endforeach
                     </tr>
-
                 @endforeach
             </tbody>
         </table>
+
     </main>
 @endsection
+
+
 
