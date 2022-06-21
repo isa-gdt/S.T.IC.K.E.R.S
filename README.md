@@ -57,6 +57,8 @@ Admin:
     Javascript, AJAX, JQuery, SASS, CSS.
 * BACK:
     PHP con el framework Laravel.
+*Despliegue:
+    La aplicación ha sido desplegada en Hostinger
 
     
  ## Checkpoint 13/05
