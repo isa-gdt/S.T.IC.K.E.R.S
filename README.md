@@ -57,9 +57,15 @@ Admin:
     Javascript, AJAX, JQuery, SASS, CSS.
 * BACK:
     PHP con el framework Laravel.
-*Despliegue:
-    La aplicación ha sido desplegada en Hostinger
+* Despliegue:
+   La aplicación ha sido desplegada en Hostinger.
+   http://daw.isastickers.online/main
 
     
  ## Checkpoint 13/05
  https://www.youtube.com/watch?v=zXwCWhote74
+ 
+ 
+ ## Mockup
+ Prototipo de la aplicación realizado en Figma
+https://www.figma.com/file/qAaPn4DeMbarmVMGnSH9T0/Stickers?node-id=0%3A1
