@@ -13,7 +13,6 @@ Y ahora todo esto será aún más fácil con S.T.I.C.K.E.R.S. Con esta novedosa 
 ## Funcionamiento
 
 - En el main de la aplicación aparecerán todos los stickers organizados por sus respectivas categorías.
-- Habrá una barra de búsqueda para poder filtrar la búsqueda de stickers por sus etiquetas.
 - Existirá la opción de loguearse para los usuarios registrados y de registrarse para los no registrados.
 - Cuando un usuario se loguea, depende del tipo de login que tenga (admin o premium) le aparecerán funcionalidades diferentes.
 - Existirá un 'art station' donde los usuarios logueados podrán crear sus propios stickers.
@@ -24,27 +23,26 @@ Y ahora todo esto será aún más fácil con S.T.I.C.K.E.R.S. Con esta novedosa 
 
 Usuario no registrado: 
    * Solo dispondrá de acceso a la main page de la aplicación.
-   * Podrá ver los stickers ya disponibles en la página y utilizar el buscador.
-   * No podrá crear ni descargar.
+   * Podrá ver los stickers ya disponibles en la página.
+   * No podrá crear.
 
 Usuario premium (registrado): 
    * Podrá acceder a la vista main, así como a su propio perfil de usuario y a la vista 'art station' para la creación de stickers.
-   * Podrá crear y descargar.
+   * Podrá crear.
    
 Admin:
    * Podrá acceder a todas las vistas.
    * Tendrá una vista propia para admins que consistirá en un panel de control.
-   * Podrá moderar usuarios de cualquier nivel, con poder para eliminar, banear, crear y dar permisos a cualquier cuenta.
-   * Podrá gestionar los packetes de stickers y su contenido, pudiendo así mismo eliminar los que no cumplan con la normativa de uso de la página.
+   * Podrá moderar usuarios de cualquier nivel, con poder para eliminar y dar permisos a cualquier cuenta.
+   * Podrá gestionar los packetes de stickers, pudiendo así mismo eliminar los que no cumplan con la normativa de uso de la página.
 
 ## BD (MySQL)
 
 - Los usuarios se dividirán en anónimos (no registrados) y registrados.
 - Los usuarios registrados se repartirán en admin y premium.
 - Los usuarios admin gestionarán todos los usuarios así como los packs de stickers.
-- Los usuarios premium podrán crear sticker y descargarlos. 
+- Los usuarios premium podrán crear sticker. 
 - Para que un usuario pueda crear un sticker primero tendrá de crear un pack donde poder ubicarlo.
-- Un pack de stickers tendrá que tener siempre como mínimo un sticker.
 - Todos los stickers tendrán entre una y muchas etiquetas identificatorias, así como cada etiqueta podrá utilizarse en uno o muchos stickers.
 
 
