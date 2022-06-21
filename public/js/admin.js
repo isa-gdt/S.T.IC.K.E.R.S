@@ -1,10 +1,10 @@
-function userView(){
-    window.open('/proyectoFinal/S.T.IC.K.E.R.S/public/admin/users', '_self');
-}
+// function userView(){
+//     window.open('/admin/users', '_self');
+// }
 
-function packView(){
-    window.open('/proyectoFinal/S.T.IC.K.E.R.S/public/admin/packs', '_self');
-}
+// function packView(){
+//     window.open('/admin/packs', '_self');
+// }
 
 
 function editPack(item){

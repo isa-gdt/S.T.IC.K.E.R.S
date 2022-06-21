@@ -17,7 +17,7 @@ use App\Http\Controllers\packController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('main');
 });
 
 Route::get('/dashboard', function () {

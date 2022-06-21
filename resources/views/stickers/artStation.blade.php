@@ -49,7 +49,7 @@ if (isset($img)){
                 <?php
                 if (isset($img)){
                 ?>
-                    <img class="resize-image" src="../img/{{$img}}" alt="Image" />
+                    <img class="resize-image" src={{asset('storage/img/'.$img)}} alt="Image" />
                 <?php
                 }
                 ?>

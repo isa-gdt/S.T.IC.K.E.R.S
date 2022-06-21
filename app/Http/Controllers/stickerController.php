@@ -87,7 +87,7 @@ class stickerController extends Controller
 
         if($req->hasFile('file')){
             $file = $req->file('file');
-            $destinationPath = '../img/';
+            $destinationPath = 'storage/img/';
             $fileName = time(). '-' . $file->getClientOriginalName();
             $uplopadSuccess = $req->file('file')->move($destinationPath, $fileName);
 
