@@ -56,18 +56,13 @@ class stickerController extends Controller
         return view('stickers.artStation', ["pack"=>$pack]);
     }
 
-    public function index(){
-        return view('posts.index');
+    public function goToVideo(Request $req){
+        return view('admin.video');
     }
 
-    public function search(Request $request){
-        $results = Sticker::where('title', 'LIKE', "%{$request->search}%")->get();
 
-        $results = DB::select('SELECT img FROM sticker s, sticker_etiqueta se, etiqueta e WHERE s.idSti=se.idSti AND se.idEti = e.idEti AND (e.tag = "%{$request->search}%")')->get();
 
-        //condicional para ver si está logueado o no
-        return view('stickers.logged', compact('results'))->with(['search' => $request->search])->render();
-    }
+
 
     public function createSticker(Request $req){
         $pack = DB::table('pack')->where('name', '=', $req->packName)->first();

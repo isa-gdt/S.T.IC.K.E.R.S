@@ -49,6 +49,7 @@ Route::group(["prefix"=>"admin", 'as' => "admin."], function(){
     Route::get('/adminMain',[userController::class,'goToAdminMain'])->name('adminMain');
     Route::get('/editUser/{usu}', [userController::class, 'editUser'])->name('editUser');
     Route::get('editPack/{pack}', [packController::class, 'editPackView'])->name('editPackView');
+    Route::get('/video', [stickerController::class, 'goToVideo'])->name('video');
 });
 
 
