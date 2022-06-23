@@ -41,8 +41,8 @@ Route::get('/logged',[stickerController::class, 'getStickers'])->name('logged');
 /**
  * Operaciones con admin (en userController)
  */
-//'middleware' => 'admin',
-Route::group(["prefix"=>"admin", 'as' => "admin."], function(){
+
+Route::group(['middleware' => 'admin', "prefix"=>"admin", 'as' => "admin."], function(){
     Route::get('/admin',[userController::class, 'goToAdmin'])->name('admin');
     Route::get('/users',[userController::class,'goToUsers'])->name('users');
     Route::get('/packs',[userController::class,'goToPacks'])->name('packs');

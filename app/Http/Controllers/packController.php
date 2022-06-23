@@ -35,11 +35,7 @@ class packController extends Controller
             'name'=>$req->name,
             'creation_date'=>now(),
         ]);
-        if(Auth::user()->type==0){
-            return redirect()->route('myCollection');
-        } else{
-            return redirect()->route('admin.packs');
-        }
+        return redirect()->route('myCollection');
     }
 
     public function editPackView(Request $req, Pack $pack){

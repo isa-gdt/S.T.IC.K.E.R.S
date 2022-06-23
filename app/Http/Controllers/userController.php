@@ -36,13 +36,13 @@ class userController extends Controller
     }
 
     public function delete (Request $req, User $usu){
-        $usu->delete();
-        if(Auth::user()->type==0){
-            return redirect()->route('logout');
+        if(Auth::user()->idUsu==$usu->idUsu){
+            $usu->delete();
+            return redirect()->route('main');
         } else{
+            $usu->delete();
             return redirect()->route('admin.users');
         }
-
     }
 
     public function goToAdminMain(Request $req){

@@ -30,7 +30,7 @@
             <input type="text" name="email" placeholder="{{$usu->email}}"><br>
             <input class="editDatos-btn" type="submit" value="Modificar datos">
         </form>
-        <button id="borrarCuenta-btn"><a href="{{route('user.delete', $usu)}}"></a>Eliminar Cuenta</button>
+        <button id="borrarCuenta-btn" ><a href="{{route('user.delete', $usu)}}">Eliminar Cuenta</a></button>
 
 
         <div id="profile-notifications">
